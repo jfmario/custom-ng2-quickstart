@@ -19,6 +19,8 @@ npm start
 
 ## Replacing Backend #
 
+The `AuthService` currently points a dev backend that is rarely listening.
+
 To use with another login service, change salt in
 `app/auth/data/settings.data.ts` and point `app/auth/lib/auth.service.ts`
 to a base url that implements these endpoints (or rewrite auth service):
