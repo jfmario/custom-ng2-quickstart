@@ -10,7 +10,7 @@ export class AuthCheckAbstractComponent implements OnInit {
 
     public currentUser: String = null;
 
-    constructor ( private authService : AuthService, private router: Router ) {}
+    constructor ( protected authService : AuthService, protected router: Router ) {}
 
     ngOnInit ()
     {

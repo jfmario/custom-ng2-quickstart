@@ -39,4 +39,4 @@ export class AuthComponent implements OnInit {
         }
         else self.checkComplete = true;
     }
-}
+};

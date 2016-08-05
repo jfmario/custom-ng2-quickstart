@@ -13,7 +13,7 @@ export class AuthService {
     private baseUrl = 'http://ec2-54-191-90-8.us-west-2.compute.amazonaws.com/auth';
     private sessionsUrl = this.baseUrl + '/sessions';
     private usersUrl = this.baseUrl + '/users';
-    private currentUser: String = null;
+    public currentUser: String = null;
     private currentToken: String = null;
 
     public justRegistered: boolean = false;
@@ -77,7 +77,7 @@ export class AuthService {
             { headers: headers } ).toPromise ()
             .then ( function ( response )
             {
-                self.currentToken = response._body;
+                self.currentToken = response.text ();
                 window.localStorage.setItem ( 'jfmToken', self.currentToken );
                 self.currentUser = postData.username;
                 return self.currentToken;

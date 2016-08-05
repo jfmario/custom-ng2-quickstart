@@ -10,7 +10,7 @@ import { AuthCheckAbstractComponent } from '../middleware/auth-check.abstract.co
 })
 export class LandingComponent extends AuthCheckAbstractComponent {
 
-    constructor ( private authService : AuthService, private router: Router )
+    constructor ( protected authService: AuthService, protected router: Router )
     {
         super ( authService, router );
     }
